@@ -14,12 +14,36 @@
 <!-- 🐶 Ensuite logge dans la console la variable res après chaque appelle de fonction  -->
 <!--   🤖 console.log() -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <body>
     <h1>voir la console</h1>
     <script>
       //démarre ici
+      const somme = (num1, num2) => {
+        return num1 + num2
+      }
+
+      const sayHello = (nom) => {
+        return "Hello".concat(" ", nom)
+      }
+
+      const multiplication = (num1, num2) => {
+        return num1 * num2
+      }
+
+      const calculAir = (longeur, largeur) => {
+        return multiplication(longeur, largeur)
+      }
+
+      let res = somme(1, 4)
+      console.log(res)
+      res = sayHello("Lou")
+      console.log(res)
+      res = multiplication(4, 5)
+      console.log(res)
+      res = calculAir(2, 7)
+      console.log(res)
     </script>
   </body>
 </html>
