@@ -43,9 +43,15 @@
       person.rue = 17
       person.frameworks = ["React", "Angular", "Vue"]
 
-      for (const persons of person) {
-        console.log(persons)
+      for (const key in person) {
+        console.log(person[key])
       }
+
+      person.somme = (num1, num2) => {
+        return num1 + num2
+      }
+
+      console.log(person.somme(4, 6))
     </script>
   </body>
 </html>
