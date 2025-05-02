@@ -16,12 +16,25 @@
 <!-- 🐶 Supprime le dernier élément du tableau avec splice   -->
 <!--   📑 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <body>
     <h1>voir la console</h1>
     <script>
       //démarre ici
+      const langageList = ["hmtl", "css", "js"]
+      langageList.push("java")
+      langageList.push("python")
+      langageList.push("c++")
+
+      for (const langage of langageList) {
+        console.log(langage)
+      }
+      //langageList.forEach((e) => console.log(e))
+      langageList[0] = "html5"
+      //langageList.pop()
+      langageList.splice(langageList.length - 1, 1)
+      console.log(langageList)
     </script>
   </body>
 </html>
