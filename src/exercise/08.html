@@ -54,6 +54,10 @@
         list.innerText = e
         newUl.appendChild(list)
       })
+
+      var styleAttr = document.createAttribute("style")
+      styleAttr.value = "background-color:powderblue"
+      document.getElementById("root").setAttributeNode(styleAttr)
     </script>
   </body>
 </html>
