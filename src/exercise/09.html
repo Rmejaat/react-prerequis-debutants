@@ -8,7 +8,15 @@
       <h1 id="title">Pas d'information</h1>
       <!-- 🐶 Créé un bouton avec attribut onclick qui fait appelle à la fonction handleClick()-->
       <!-- 🤖 <button onclick="handleClick()">Click me</button> -->
-      <button onclick="handleClick()">Click me</button>
+      <button onclick="handleClick()" onmouseover="handleClick()">
+        Click me
+      </button>
+      <div style="background-color: lightblue" onmouseenter="handleClick()">
+        entre ici
+      </div>
+      <div style="background-color: lightcoral" onmouseleave="handleClick()">
+        entre ici
+      </div>
     </div>
     <script>
       // 🐶 Créé une fonction handleClick() et déclare 2 variables date et time
@@ -21,6 +29,18 @@
 
         document.getElementById("title").innerText = label
       }
+
+      function handlePress(event) {
+        var name = event.key
+        var code = event.code
+        console.log("name " + name + " : code " + code)
+
+        if (name == "Enter" || name == "ArrowDown" || name == "ArrowUp") {
+          handleClick()
+        }
+      }
+      document.addEventListener("keydown", handlePress)
+      // removeEventListener pour supprimer le listner
 
       // 🤖 var date = new Date().toLocaleDateString() et
       // var time = new Date().toLocaleTimeString()
