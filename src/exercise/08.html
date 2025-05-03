@@ -23,9 +23,9 @@
       para.innerText = "Ceci est un paragraphe"
       document.getElementById("root").appendChild(para)
 
-      const footer = document.createElement("footer")
-      footer.innerText = "Site créé par ..."
-      document.getElementById("root").appendChild(footer)
+      // const footer = document.createElement("footer")
+      // footer.innerText = "Site créé par ..."
+      // document.getElementById("root").appendChild(footer)
 
       // 🐶 Ajoute ensuite le text "Introduction"
 
@@ -38,6 +38,22 @@
       // 🐶 Créé ensuite un nouveau element <footer> avec le texte "Site créé par .." et ajoute le dans la div root
 
       // 🚀 La suite est dans la section bonus
+      const langages = ["html", "css", "js"]
+
+      const newUl = document.createElement("ul")
+      document.getElementById("root").appendChild(newUl)
+
+      // for (let i = 0; i < langages.length; i++) {
+      //   const list = document.createElement("li")
+      //   list.innerText = langages[i]
+      //   newUl.appendChild(list)
+      // }
+
+      langages.map((e) => {
+        const list = document.createElement("li")
+        list.innerText = e
+        newUl.appendChild(list)
+      })
     </script>
   </body>
 </html>
