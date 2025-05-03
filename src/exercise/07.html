@@ -1,20 +1,30 @@
 <!-- JavaScript - Conditions - Opérateurs de comparaison  -->
 <!-- http://localhost:3000/alone/exercise/07.html -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <body>
     <h1>voir la console</h1>
     <script>
       var personne = {
-        nom: 'Chirac',
-        prenom: 'Jacques',
+        nom: "Chirac",
+        prenom: "Jacques",
         age: 21,
-        adresse: 'rue du temple',
-        langages: ['html', 'css', 'js'],
+        adresse: "rue du temple",
+        langages: ["html", "css", "js"],
       }
       // 🐶 Vérifie si le prénom est bien Jacques sinon logue une erreur
       // 🤖 if (personne.nom == "")
+
+      personne.prenom === "Jacques" ? console.log("ok") : console.error("error")
+      personne.nom === "Macron" ? console.log("ok") : console.error("error")
+      personne.age > 18 ? console.log("ok") : console.error("error")
+      personne.adresse === "rue du temple"
+        ? console.log("ok")
+        : console.error("error")
+      personne.langages.includes("js")
+        ? console.log("ok")
+        : console.error("error")
 
       // 🐶 répète l'opération  pour le nom, age, adresse
 
