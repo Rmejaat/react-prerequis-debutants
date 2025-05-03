@@ -1,7 +1,7 @@
 <!-- JavaScript - Manipuler le DOM  -->
 <!-- http://localhost:3000/alone/exercise/08.html -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <body>
     <div id="root">
@@ -11,9 +11,21 @@
     <script>
       // 🐶 Récupère l'élement h1 et change son texte par Hello Worlkd
       //  🤖 document.getElementById("title").innerHTML
+      document.getElementById("title").innerHTML = "Welcome"
 
       // 🐶 Créé ensuite un nouveau element h2 et socke cet élement dans une variable "newH2"
       //  🤖 document.createElement
+      const newh2 = document.createElement("h2")
+      newh2.innerText = "Introduction"
+      document.getElementById("root").appendChild(newh2)
+
+      const para = document.createElement("p")
+      para.innerText = "Ceci est un paragraphe"
+      document.getElementById("root").appendChild(para)
+
+      const footer = document.createElement("footer")
+      footer.innerText = "Site créé par ..."
+      document.getElementById("root").appendChild(footer)
 
       // 🐶 Ajoute ensuite le text "Introduction"
 

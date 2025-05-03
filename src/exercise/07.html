@@ -18,7 +18,7 @@
 
       personne.prenom === "Jacques" ? console.log("ok") : console.error("error")
       personne.nom === "Macron" ? console.log("ok") : console.error("error")
-      personne.age > 18 ? console.log("ok") : console.error("error")
+      personne.age >= 18 ? console.log("ok") : console.error("error")
       personne.adresse === "rue du temple"
         ? console.log("ok")
         : console.error("error")
@@ -33,7 +33,7 @@
       // 📑 https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 
       // 🚀 La suite est dans la section bonus
-      personne.age > 18 &&
+      personne.age >= 18 &&
       personne.nom === "Chirac" &&
       personne.langages.includes("js")
         ? console.log("ok")
@@ -47,7 +47,7 @@
 
       personne.adresse === "rue du temple" ||
       personne.adresse === "rue de la pompe" &&
-      personne.age > 18
+      personne.age >= 18
         ? console.log("ok")
         : console.error("error")
     </script>
